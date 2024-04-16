@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket1" {
-    bucket = "web-bucket-mathesh"
+    bucket = var.var_bucket_name
   
 }
 resource "aws_s3_bucket_public_access_block" "bucket1" {
