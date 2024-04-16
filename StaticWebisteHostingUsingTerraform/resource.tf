@@ -30,7 +30,7 @@ resource "aws_s3_object" "index" {
   bucket = aws_s3_bucket.bucket1.id
   key    = "index.html"
   acl = "public-read"	
-  source = "index.html"
+  source = "${path.module}/index.html"
   content_type = "text/html"
 }
 
@@ -38,7 +38,7 @@ resource "aws_s3_object" "error" {
   bucket = aws_s3_bucket.bucket1.id
   key    = "error.html"
   acl = "public-read"
-  source = "error.html"
+  source = "${path.module}/error.html"
   content_type = "text/html"
 }
 
